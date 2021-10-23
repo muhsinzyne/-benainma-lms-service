@@ -1,0 +1,28 @@
+{
+    "name": "muhsinzyne/benainma-lms-service",
+    "description": "An package for Benainma LMS Application",
+    "type": "library",
+    "require": {
+        "muhsinzyne/benainma-service": "dev-master"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Muhsinzyne\\BenainmaLmsService\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Muhsin Zyne",
+            "email": "muhsin.zyne@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MuhsinZyne\\LmsService\\BenainmaLmsServiceProvider"
+            ]
+        }
+    }
+}
