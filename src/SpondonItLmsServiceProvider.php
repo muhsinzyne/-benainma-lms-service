@@ -1,11 +1,12 @@
 <?php
-namespace MuhsinZyne\BenainmaLmsService;
+
+namespace SpondonIt\LmsService;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Contracts\Http\Kernel;
-use MuhsinZyne\LmsService\Middleware\LmsService;
+use SpondonIt\LmsService\Middleware\LmsService;
 
-class BenainmaLmsServiceProvider extends ServiceProvider
+class SpondonItLmsServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.
@@ -27,9 +28,9 @@ class BenainmaLmsServiceProvider extends ServiceProvider
         $kernel = $this->app->make(Kernel::class);
         $kernel->pushMiddleware(LmsService::class);
 
-        $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
-        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'lms');
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'lms');
-        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
+        $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'lms');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'lms');
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
     }
 }

@@ -1,21 +1,21 @@
 <?php
-namespace MuhsinZyne\BenainmaLmsService\Middleware;
+
+namespace SpondonIt\LmsService\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Storage;
-use MuhsinZyne\Service\Repositories\InitRepository as ServiceRepository;
-use MuhsinZyne\BenainmaLmsService\Repositories\InitRepository;
+use SpondonIt\Service\Repositories\InitRepository as ServiceRepository;
+use SpondonIt\LmsService\Repositories\InitRepository;
 
 class LmsService
 {
-    protected $repo;
-    protected $service_repo;
+    protected $repo, $service_repo;
 
     public function __construct(
         InitRepository $repo,
         ServiceRepository $service_repo
     ) {
-        $this->repo         = $repo;
+        $this->repo = $repo;
         $this->service_repo = $service_repo;
     }
 
@@ -32,15 +32,15 @@ class LmsService
 
         $this->service_repo->init();
 
-        if ($this->inExceptArray($request)) {
+        if($this->inExceptArray($request)){
             return $next($request);
         }
 
         $temp = Storage::exists('.temp_app_installed') ? Storage::get('.temp_app_installed') : false;
-
+        
         if (!$temp) {
             $database = $this->service_repo->checkDatabase();
-            $logout   = Storage::exists('.logout') ? Storage::get('.logout') : false;
+            $logout = Storage::exists('.logout') ? Storage::get('.logout') : false;
             if (!$database and !$logout) {
                 \Log::info($request->url());
                 \Log::info('Table not found');
@@ -57,9 +57,11 @@ class LmsService
         $this->repo->config();
 
         return $next($request);
+
+
     }
 
-    /**
+      /**
      * The names of the cookies that should not be encrypted.
      *
      * @var array
@@ -70,6 +72,7 @@ class LmsService
 
     protected function inExceptArray($request)
     {
+
         foreach ($this->except as $except) {
             if ($except !== '/') {
                 $except = trim($except, '/');

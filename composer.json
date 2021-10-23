@@ -8,7 +8,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Muhsinzyne\\BenainmaLmsService\\": "src/"
+            "SpondonIt\\LmsService\\": "src/"
         }
     },
     "authors": [
@@ -21,7 +21,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "MuhsinZyne\\BenainmaLmsService\\BenainmaLmsServiceProvider"
+                "SpondonIt\\LmsService\\SpondonItLmsServiceProvider"
             ]
         }
     }

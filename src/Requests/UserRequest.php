@@ -1,5 +1,6 @@
 <?php
-namespace MuhsinZyne\LmsService\Requests;
+
+namespace SpondonIt\LmsService\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -22,7 +23,8 @@ class UserRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = [];
+
+        $rules = array();
 
         $rules = [
             'email'                 => 'required|email',
