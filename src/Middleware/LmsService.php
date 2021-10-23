@@ -1,10 +1,10 @@
 <?php
-namespace MuhsinZyne\LmsService\Middleware;
+namespace MuhsinZyne\BenainmaLmsService\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Storage;
 use MuhsinZyne\Service\Repositories\InitRepository as ServiceRepository;
-use MuhsinZyne\LmsService\Repositories\InitRepository;
+use MuhsinZyne\BenainmaLmsService\Repositories\InitRepository;
 
 class LmsService
 {

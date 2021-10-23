@@ -21,7 +21,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "MuhsinZyne\\LmsService\\BenainmaLmsServiceProvider"
+                "MuhsinZyne\\BenainmaLmsService\\BenainmaLmsServiceProvider"
             ]
         }
     }

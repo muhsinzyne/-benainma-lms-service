@@ -1,5 +1,5 @@
 <?php
-namespace MuhsinZyne\LmsService;
+namespace MuhsinZyne\BenainmaLmsService;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Contracts\Http\Kernel;

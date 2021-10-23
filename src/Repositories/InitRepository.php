@@ -1,5 +1,5 @@
 <?php
-namespace MuhsinZyne\LmsService\Repositories;
+namespace MuhsinZyne\BenainmaLmsService\Repositories;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;

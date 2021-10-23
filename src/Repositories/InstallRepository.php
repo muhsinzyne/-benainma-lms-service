@@ -1,5 +1,5 @@
 <?php
-namespace MuhsinZyne\LmsService\Repositories;
+namespace MuhsinZyne\BenainmaLmsService\Repositories;
 
 ini_set('max_execution_time', -1);
 
@@ -9,7 +9,7 @@ use Modules\Setting\Model\GeneralSetting;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Support\Facades\Schema;
-use MuhsinZyne\Service\Repositories\InstallRepository as ServiceInstallRepository;
+use MuhsinZyne\BenainmaLmsService\Repositories\InstallRepository as ServiceInstallRepository;
 
 class InstallRepository
 {

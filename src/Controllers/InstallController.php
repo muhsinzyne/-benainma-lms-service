@@ -1,11 +1,11 @@
 <?php
-namespace MuhsinZyne\LmsService\Controllers;
+namespace MuhsinZyne\BenainmaLmsService\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use MuhsinZyne\LmsService\Repositories\InstallRepository;
-use MuhsinZyne\Service\Repositories\InstallRepository as ServiceRepository;
-use MuhsinZyne\LmsService\Requests\UserRequest;
+use MuhsinZyne\BenainmaLmsService\Repositories\InstallRepository;
+use MuhsinZyne\BenainmaLmsService\Repositories\InstallRepository as ServiceRepository;
+use MuhsinZyne\BenainmaLmsService\Requests\UserRequest;
 use Illuminate\Support\Facades\Storage;
 
 class InstallController extends Controller
